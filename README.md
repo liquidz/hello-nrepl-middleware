@@ -1,4 +1,6 @@
 # hello-nrepl-middleware
+[![CircleCI](https://img.shields.io/circleci/project/github/liquidz/hello-nrepl-middleware/master.svg)](https://circleci.com/gh/liquidz/hello-nrepl-middleware)
+[![Dependencies Status](https://versions.deps.co/liquidz/hello-nrepl-middleware/status.svg)](https://versions.deps.co/liquidz/hello-nrepl-middleware)
 
 [nREPL](https://github.com/nrepl/nrepl) Middleware Example
 
