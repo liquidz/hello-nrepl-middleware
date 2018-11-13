@@ -21,7 +21,7 @@
   (set-descriptor!
    #'wrap-hello
    {:doc "Sample nREPL wrapper"
+    :requires #{} ; descriptors required by this descriptor
     :handles {"hello" {:doc "Sample nREPL middleware"
-                       :requires {}
-                       :returns {"hello" "world"
-                                 "status" "done"}}}}))
+                       :requires {} ; keys required by this operation
+                       :returns {"hello" "world" "status" "done"}}}}))

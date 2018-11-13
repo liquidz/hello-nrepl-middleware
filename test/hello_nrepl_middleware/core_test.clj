@@ -22,6 +22,8 @@
 (t/deftest wrap-hello-test
   (with-open [transport (nrepl/connect :port (:port *server*))]
     (let [client (nrepl/client transport Long/MAX_VALUE)
-          response (ensure-map (nrepl/message client {:op "hello"}))]
+          id (str (java.util.UUID/randomUUID))
+          response (ensure-map (nrepl/message client {:op "hello" :id id}))]
       (t/is (= (:status response) ["done"]))
-      (t/is (= "world" (:hello response))))))
+      (t/is (= "world" (:hello response)))
+      (t/is (= id (:id response))))))
